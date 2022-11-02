@@ -13,3 +13,8 @@ age = int(input("Enter your age: "))
 user = include.user_info(name, age)
 print(user)
 
+# check user age
+user_age = include.check_age(age)
+print(user_age)
+
+
