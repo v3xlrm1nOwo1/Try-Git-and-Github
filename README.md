@@ -195,7 +195,7 @@ git checkout -b branch_name commit-hash or HEAD~3
 
 ## 7 - Show Branch:
 
-🏮️ When you start the Git with the branch, you want to switch from one branch to another branch
+🏮️ When you start the Git with the branch, you want to show In which branch are you.
 
 <br>
 <br>
@@ -210,14 +210,14 @@ git branch
 ---
 
 ## 8 - Change Branch Name:
-🏮️ Sometimes you may want to change the name of the branch to a good name for different reasons
+🏮️ Sometimes you may want to change the name of the branch to a good name for different reasons.
 
 <br>
 <br>
 
 🎯️ Change current branch name.
 ```zsh
-git branch -M New-Name
+git branch -M new-name
 ```
 
 <br>
@@ -229,8 +229,8 @@ git branch -M old-name new-name
 
 ---
 
-## 9 - Swith From current branch to other branch:
-🏮️ When you start the Git with the branch, you want to switch from one branch to another branch
+## 9 - Swith From Current Branch To Other Branch:
+🏮️ When you start the Git with the branch, you want to switch from one branch to another branch.
 
 <br>
 <br>
