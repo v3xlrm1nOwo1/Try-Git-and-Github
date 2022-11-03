@@ -226,6 +226,7 @@ git branch -M new-name
 ```zsh
 git branch -M old-name new-name
 ```
+<br>
 
 ---
 
