@@ -1,4 +1,5 @@
-# Try-Git 
+# Try-Git <img src="https://user-images.githubusercontent.com/87325345/199744230-199900b7-12ee-4c1a-9f3b-f91c84a34d82.gif" width="70px" height="70" />
+
 ![git-github](https://user-images.githubusercontent.com/87325345/199505243-848a53d1-b9dc-40e0-9dd9-a369b0d4ad59.jpg)
 
 <!-- ![git](https://user-images.githubusercontent.com/87325345/199501061-20b6040e-4324-40c5-8ffa-a9c3f9e68baa.png)-->
