@@ -282,7 +282,7 @@ Changes from the branch to be merged.
 <Some Text>
 ```
 
-### ⚠️ Note:
+### In Git workflow, there are two long-lived branches: master or main branch and Develop branch, and the branches remain short-lived, such as features and bugs branch. Any branch is merged into the Develop branch, then after making sure that it is working well, it is merged into the master or main branch Note:
 
 ```
 - You must make sure that you are in the branch you want to merge in.
@@ -292,4 +292,24 @@ Changes from the branch to be merged.
 <br>
 
 ---
+
+## 11- workflow:
+🏮️ Branches in Git are one of the best things about Git and perhaps one of the best features of Git, but what Git does is that it provides the tool but does not tell you how to use it. It leaves you and your team the freedom to use the tool, but as for branches, there are two strategies that are used frequently and Each new strategy is based on them, Git workflow and Github workflow.
+
+<br>
+
+### 🎯️ Git workflow:
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In Git workflow, there are two long-lived branches: master or main branch and Develop branch, and the branches remain short-lived, such as features and bugs branch. Any branch is merged into the Develop branch, then after making sure that it is working well, it is merged into the master or main branch.
+
+![Git workflow](https://user-images.githubusercontent.com/87325345/199704078-58463d7d-840b-430a-87d3-6974402e2ab4.png)
+
+
+<br>
+
+### 🎯️ Github workflow:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the Github workflow there are short-lived branches such as features and bugs branch and then after making sure that the branch is working fine, it is merged into the master or main branch.
+
+![github-flow](https://user-images.githubusercontent.com/87325345/199710558-1f40b0a2-0a17-4b87-ae3a-feb654ed8904.png)
+
 
