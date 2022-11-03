@@ -294,6 +294,38 @@ Changes from the branch to be merged.
 
 ---
 
+pull
+
+
+<br>
+<br>
+
+---
+
+push
+
+
+<br>
+<br>
+
+---
+
+fetch
+
+
+<br>
+<br>
+
+---
+
+clone
+
+
+<br>
+<br>
+
+---
+
 ## 11- workflow:
 🏮️ Branches in Git are one of the best things about Git and perhaps one of the best features of Git, but what Git does is that it provides the tool but does not tell you how to use it. It leaves you and your team the freedom to use the tool, but as for branches, there are two strategies that are used frequently and Each new strategy is based on them, Git workflow and Github workflow.
 
