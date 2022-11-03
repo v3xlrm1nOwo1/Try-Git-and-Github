@@ -250,3 +250,46 @@ git switch branch_name
 
 ---
 
+## 10 - Git Branch Merge And Merge Conflict:
+🏮️ When you have finished working on a branch, you want to merge the changes into the master branch.
+<br>
+🎯️ Merge a branch into the current branch:
+
+```zsh
+git merge "The name of the branch to be merged"
+```
+<br>
+
+🎯️ Merge Conflict:
+Merge conflicts occur when competing changes are made to the same line of a file, or when one person edits a file and another person deletes the same file.
+
+```zsh
+$ git merge <branch-name>
+Auto-merging <file-name>
+CONFLICT (content): Merge conflict in <file-name>
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+🎯️ So we need to fix that conflict. Open the file in our editor:
+
+```zsh
+<Some Text>
+<<<<<<< HEAD
+Changes in the current branch.
+=======
+Changes from the branch to be merged.
+>>>>>>> <The name of the branch to be merged>
+<Some Text>
+```
+
+### ⚠️ Note:
+
+```
+- You must make sure that you are in the branch you want to merge in.
+- HEAD is meaned the current branch.
+```
+<br>
+<br>
+
+---
+
