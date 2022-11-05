@@ -4,13 +4,17 @@
 
 <!-- ![git](https://user-images.githubusercontent.com/87325345/199501061-20b6040e-4324-40c5-8ffa-a9c3f9e68baa.png)-->
 ---
-## 0 - Introduction To Git:
-### What is Git:
 
+## 0 - Introduction To Git:
+
+### What is Git:
 🏮 Git is a distributed version control system to manage source code history.
 
 ### What is Version Control System:
 🏮 The control system is It is a method that we as programmers use to keep track, save and record changes in our code. Basically we save an initial version of the code and when we make changes and update the code we can save it again and over and over and over and over every time we make changes to the code we can  Save it again.
+
+### What is Repository:
+🏮 The repository is the project directory, a container for the project you want to track using git.
 
 ---
 
@@ -198,7 +202,6 @@ git checkout -b branch_name commit-hash or HEAD~3
 ```
 'HEAD~number' this meaned the commit after current commit, like HEAD~4 this meaned the 3 commits after current commit.
 ```
-<br>
 
 
 ---
@@ -215,7 +218,6 @@ git checkout -b branch_name commit-hash or HEAD~3
 git branch
 ```
 
-<br>
 
 ---
 
@@ -236,7 +238,6 @@ git branch -M new-name
 ```zsh
 git branch -M old-name new-name
 ```
-<br>
 
 ---
 
@@ -256,7 +257,6 @@ git checkout branch_name
 ```zsh
 git switch branch_name
 ```
-<br>
 
 ---
 
@@ -292,85 +292,176 @@ Changes from the branch to be merged.
 <Some Text>
 ```
 
-### In Git workflow, there are two long-lived branches: master or main branch and Develop branch, and the branches remain short-lived, such as features and bugs branch. Any branch is merged into the Develop branch, then after making sure that it is working well, it is merged into the master or main branch Note:
-
 ```
 - You must make sure that you are in the branch you want to merge in.
 - HEAD is meaned the current branch.
 ```
-<br>
-<br>
+
+
+### ⚠️ Note:
+```
+- In Git workflow, there are two long-lived branches: master or main and Develop branchs, and the branches remain 
+  short-lived, such as features and bugs brancha. Any branch is merged into the Develop branch, then after making sure 
+  that it is working well, it is merged into the master or main branch.
+
+- You can use merge to update your local branch when there are updates in the (master, main) branch in the remote repository , 
+  you bring the talk in the remote repository to the (master, main) branch in your repository using pull or fetch , then merge your 
+  (master, main) into the branch you are working on.
+```
+
 
 ---
 
-# Git Clone:
+# 11 - Git Clone:
 
-🏮️ 
+🏮️ Git clone is used to copy or clone a different repository in your local machine.
 
-🎯️ 
 
 ```zsh
-git clone url
+git clone <url>
 ```
+
 ```zsh
 git clone https://github.com/BlackHeart-Dev/try-git.git
 ```
 
-<br>
-<br>
-
 ---
-# Git Remote:
 
-🏮️ 
 
-🎯️ 
+# 12 - Git Remote:
 
+🏮️ Git remote is used to refer to a remote repository or your central repository, e.g: When you want to add a remote repository as your origin.
 
 ```zsh
-git remote add origin url
+git remote add <alias> <url>
 ```
+
 ```zsh
 git remote add origin https://github.com/BlackHeart-Dev/try-git.git 
 ```
 
+### 🎯️ Git Clone VS Git Remote:
+```
+- Git clone is used to copy or clone a different repository in your local machine.
+
+- Git remote is used to refer to a remote repository or your central repository, 
+  e.g: When you want to add a remote repository as your origin.
+  
+- Git clone creates a new git repository by copying an existing one located at the URI you specify.
+  
+- Git remote add just creates an entry in your git config that specifies a name for a particular URL. 
+  You must have an existing git repo to use this.
+  
+- Git clone Will physically download the files into your computer. It will take space from your computer. 
+  If the repo is 200Mb, then it will download that all and place it in the directory you cloned.
+  
+- Won't take space! It's more like a pointer! It doesn't increase your disk consumption. 
+  It just gets a snapshot of what branches are available and their git commit history I believe. 
+  It doesn't contain the actual file/folders of your project.
+ 
+*from Stackoverflow.
+```
+
 ### ⚠️ Note:
+```
+- origin is alias for remote repository, It is used to refer to the remote repository instead of 
+  using the url every time you want to pull or push or fetch.
+```
+
+---
+
+## 13 - Git Pull:
+
+🏮️ <a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">The git pull</a> command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. Merging remote upstream changes into your local repository is a common task in Git-based collaboration work flows. The git pull command is actually a combination of two other commands, git fetch followed by git merge. In the first stage of operation git pull will execute a git fetch scoped to the local branch that HEAD is pointed at. Once the content is downloaded, git pull will enter a merge workflow. A new merge commit will be-created and HEAD updated to point at the new commit.
+
+<br>
+
+```zsh
+git pull --set-upstream <remote> <branch>
+```
+or
+
+```zsh
+git pull -u <remote> <branch>
+```
+
+<br>
+
+```zsh
+git pull --set-upstream origin xz-y-10.2
+```
+or
+
+```zsh
+git pull -u origin xz-y-10.2
+```
+
+
+---
+
+## 14 - Git Fetch:
+
+🏮️ <a href="https://www.atlassian.com/git/tutorials/syncing/git-fetch">The git fetch</a> command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on. It’s similar to svn update in that it lets you see how the central history has progressed, but it doesn’t force you to actually merge the changes into your repository. Git isolates fetched content from existing local content; it has absolutely no effect on your local development work. Fetched content has to be explicitly checked out using the git checkout command. This makes fetching a safe way to review commits before integrating them with your local repository.
+
+<br>
+
+```zsh
+git fetch <remote-repo> 
+```
+
+```zsh
+git fetch https://github.com/BlackHeart-Dev/try-git.git 
+```
+
+or
+
+```zsh
+git fetch origin
+```
+
+<h3> 🎯️ <a href="https://www.git-tower.com/learn/git/faq/difference-between-git-fetch-git-pull"> Git Clone VS Git Remote</a>:</h3>
 
 ```
-Git Clone VS Git Remote:
+- Git fetch really only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files. 
+  Fetch is great for getting a fresh view on all the things that happened in a remote repository. Due to it's "harmless" nature, 
+  you can rest assured: fetch will never manipulate, destroy, or screw up anything. This means you can never fetch often enough.
+  
+- Git pull, in contrast, is used with a different goal in mind: to update your current HEAD branch with the latest changes from the remote server. 
+  This means that pull not only downloads new data; it also directly integrates it into your current working copy files. 
+  This has a couple of consequences:
+  > Since "git pull" tries to merge remote changes with your local ones, a so-called "merge conflict" can occur. 
 
+  > Like for many other actions, it's highly recommended to start a "git pull" only with a clean working copy. 
+    This means that you should not have any uncommitted local changes before you pull. 
+    Use Git's Stash feature to save your local changes temporarily.
 ```
 
-<br>
-<br>
+
 
 ---
 
-push
+## 15 - Git Push:
 
+🏮️ <a href="https://www.atlassian.com/git/tutorials/syncing/git-push">The git push</a> command is used to upload local repository content to a remote repository. Pushing is how you transfer commits from your local repository to a remote repo. It's the counterpart to git fetch, but whereas fetching imports commits to local branches, pushing exports commits to remote branches. Remote branches are configured using the git remote command. Pushing has the potential to overwrite changes, caution should be taken when pushing.
 
-<br>
-<br>
+```zsh
+git push <url>
+```
 
----
+```zsh
+git push https://github.com/BlackHeart-Dev/try-git.git
+```
 
-fetch
+or
 
-
-<br>
-<br>
-
----
-
-clone
-
-
-<br>
-<br>
+```zsh
+git push origin
+```
 
 ---
 
-## 11- workflow:
+## 16 - workflow:
+
 🏮️ Branches in Git are one of the best things about Git and perhaps one of the best features of Git, but what Git does is that it provides the tool but does not tell you how to use it. It leaves you and your team the freedom to use the tool, but as for branches, there are two strategies that are used frequently and Each new strategy is based on them, Git workflow and Github workflow.
 
 <br>
@@ -391,7 +482,7 @@ clone
 
 ---
 
-# Git Vs Github:
+## 17 - Git Vs Github:
 
 <h1 align="center">Git VS Github</h1>
 
@@ -430,6 +521,9 @@ clone
    </tbody>
 </table>
 
+```
+- By DataScienceDojo.
+```
 
 ---
 <h1 align="center">⚠️ Don't forget to add a star ⭐️</h1>
