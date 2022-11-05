@@ -294,8 +294,43 @@ Changes from the branch to be merged.
 
 ---
 
-pull
+# Git Clone:
 
+🏮️ 
+
+🎯️ 
+
+```zsh
+git clone url
+```
+```zsh
+git clone https://github.com/BlackHeart-Dev/try-git.git
+```
+
+<br>
+<br>
+
+---
+# Git Remote:
+
+🏮️ 
+
+🎯️ 
+
+
+```zsh
+git remote add origin url
+```
+```zsh
+git remote add origin https://github.com/BlackHeart-Dev/try-git.git 
+```
+
+### ⚠️ Note:
+
+```
+Git Clone VS Git Remote:
+
+```
 
 <br>
 <br>
@@ -345,6 +380,39 @@ clone
 
 ![github-flow](https://user-images.githubusercontent.com/87325345/199710558-1f40b0a2-0a17-4b87-ae3a-feb654ed8904.png)
 
+---
+
+# Git Vs Github:
+
+<h1 align="center">Git VS Github</h1>
+
+<table align="center">
+   <thead>
+      <tr>
+         <th>Github</th>
+         <th>Git</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td align="center">Github is a sevice</td>
+         <td align="center">Git is a software</td>
+      </tr>
+      <tr>
+         <td align="center">Github is a graphical user interface</td>
+         <td align="center">Git is a command-line tool</td>
+      </tr>
+      <tr>
+         <td align="center">Github is a hosted on the web for git</td>
+         <td align="center">Git is installed locally on your local machine</td>
+      </tr>
+      <tr>
+         <td align="center">Github is maintained by Microsoft</td>
+         <td align="center">Git is maintained by Linux</td>
+      </tr>
+   </tbody>
+</table>
+
 
 ---
-# ⚠️ Don't forget to add a star ⭐️
+<h1 align="center">⚠️ Don't forget to add a star ⭐️</h1>
