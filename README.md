@@ -410,6 +410,14 @@ clone
          <td align="center">Github is maintained by Microsoft</td>
          <td align="center">Git is maintained by Linux</td>
       </tr>
+      <tr>
+         <td align="center">Github is focused on the centralized code hosting</td>
+         <td align="center">Git is focused on version control and code sharing</td>
+      </tr>
+      <tr>
+         <td align="center">Github is a hosting service for git repositories</td>
+         <td align="center">Git is a distributed version control system to manage source code history</td>
+      </tr>
    </tbody>
 </table>
 
