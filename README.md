@@ -4,6 +4,15 @@
 
 <!-- ![git](https://user-images.githubusercontent.com/87325345/199501061-20b6040e-4324-40c5-8ffa-a9c3f9e68baa.png)-->
 ---
+## 0 - Introduction To Git:
+### What is Git:
+
+🏮 Git is a distributed version control system to manage source code history.
+
+### What is Version Control System:
+🏮 The control system is It is a method that we as programmers use to keep track, save and record changes in our code. Basically we save an initial version of the code and when we make changes and update the code we can save it again and over and over and over and over every time we make changes to the code we can  Save it again.
+
+---
 
 ## 1 - Check Git Installed:
 
