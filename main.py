@@ -1,20 +1,24 @@
-import include # function include 
+from include import user_info, check_age # function include 
 
 # print hello
 print("hello world!")
 
-# user enter name
-name = input("Enter your name: ")
+try:
+	# user enter name
+	name = input("Enter your name: ")
 
-# user enter age
-age = int(input("Enter your age: "))
+	# user enter age
+	age = int(input("Enter your age: "))
+except ValueError:
+	print("Please provide valid input")
+	exit(0)
 
 # return info
-user = include.user_info(name, age)
+user = user_info(name, age)
 print(user)
 
 # check user age
-user_age = include.check_age(age)
+user_age = check_age(age)
 print(user_age)
 
 

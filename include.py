@@ -6,9 +6,10 @@ def user_info(name="oh", age=0):
 # Ckeck Age
 def check_age(age=0):
     print(f"> Your age is: {age}")
+    
     if age >= 18:
         return f"> Okay you can entry"
-    else:
-        return f"> Sorry you can not entry"
+    
+    return f"> Sorry you can not entry"
 
 
