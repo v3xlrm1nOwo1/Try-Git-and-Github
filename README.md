@@ -10,11 +10,11 @@
 ### What is Git:
 🏮 Git is a distributed version control system to manage source code history.
 
-### What is Version Control System:
-🏮 The control system is It is a method that we as programmers use to keep track, save and record changes in our code. Basically we save an initial version of the code and when we make changes and update the code we can save it again and over and over and over and over every time we make changes to the code we can  Save it again.
+### What is a Version Control System:
+🏮 It is a method that we programmers use to save, record and keep track of changes in our code. Basically, we store a version of the code at any given instance, such that if we ever made changes to it, we can always know where those changes were made. Not only can we know the prior changes, we can in fact trace back the history of changes all the way back to the very first initial version of our code. (This of course just comes at the cost of remembering to commit your changes over and over and over again with every time you edit the code).
 
-### What is Repository:
-🏮 The repository is the project directory, a container for the project you want to track using git.
+### What is a Repository:
+🏮 The repository is the project directory, a container or folder for the project you want to track using git.
 
 ---
 
@@ -28,7 +28,7 @@ git --version
 
 ## 2 - Git Config:
 
-🏮️ When we start making changes to files, Git wants to know who's making those changes so they can keep track of them.
+🏮️ When we make changes to files, Git wants to know who's making these changes so they can keep track of them.
 <br>
 <br>
 
@@ -73,7 +73,7 @@ git add .
 
 <br>
 
-🎯️ Add all changes to the staging environment.
+🎯️ Add all changes in all directories to the staging environment.
 ```zsh
 git add --all
 ```
@@ -94,7 +94,7 @@ git add main.*
 
 <br>
 
-🎯️ Adding chunk of the changes to staging environment.
+🎯️ Adding a chunk of the changes to the staging environment.
 ```zsh
 git add -p
 ```
@@ -104,7 +104,7 @@ git add -p
 
 ## 4 - Git Commit:
 
-🏮️ Git Commit can be thought of as a save point, a point you can refer to if something goes wrong in the future or if you want to know how the code was at a particular point in time.
+🏮️ Git Commit can be thought of as a save point, a point you can refer to if something goes wrong in the future, or if you want to know how the code was at a particular moment in time.
 
 <br>
 <br>
@@ -139,7 +139,7 @@ git commit
 ### ⚠️ Note:
 
 ```
-The commitment message should be a well descriptive message and the message length should not exceed 80 characters.
+The commitment message should be a well-constrcuted, descriptive message, and the message length should not exceed 80 characters.
 ```
 ---
 
@@ -166,7 +166,7 @@ git command --help
 
 ## 6 - Git Create Branch:
 
-🏮️ When we start in git there is a branch that is created with the initialization of the repository called branch master where it is the production branch, and can create new brach and a branch is a copy of the repository at a certain point in time with different changes than the main branch.
+🏮️ When we start in Git, there is a branch that is created with the initialization of the repository, typically called "master" or "main". It is the primary production branch in most cases, which motivates most users to create other branches for development purposes. This branching serves to maintain the main branch, and perhaps test or debug the code without affecting it. 
 
 <br>
 <br>
@@ -200,7 +200,7 @@ git checkout -b branch_name commit-hash or HEAD~3
 ### ⚠️ Note:
 
 ```
-'HEAD~number' this meaned the commit after current commit, like HEAD~4 this meaned the 3 commits after current commit.
+'HEAD~number' this means a number of commits after current commit, (e.g HEAD~4 means the 3 commits after current commit).
 ```
 
 
@@ -208,12 +208,12 @@ git checkout -b branch_name commit-hash or HEAD~3
 
 ## 7 - Show Branch:
 
-🏮️ When you start the Git with the branch, you want to show In which branch are you.
+🏮️ When using Git with multiple branches, you may get lost and need to check which branch you're currently in.
 
 <br>
 <br>
 
-🎯️ can see the current branch, but the * beside branch-name specifies that we are currently on that branch.
+🎯️ can see the current branch with a '*' beside the branch name.
 ```zsh
 git branch
 ```
@@ -222,7 +222,7 @@ git branch
 ---
 
 ## 8 - Change Branch Name:
-🏮️ Sometimes you may want to change the name of the branch to a good name for different reasons.
+🏮️ Sometimes you may want to change the name of a branch to a another name.
 
 <br>
 <br>
@@ -241,8 +241,8 @@ git branch -M old-name new-name
 
 ---
 
-## 9 - Swith From Current Branch To Other Branch:
-🏮️ When you start the Git with the branch, you want to switch from one branch to another branch.
+## 9 - Switch From Current Branch To Other Branch:
+🏮️ When you want to switch from one branch to another branch.
 
 <br>
 <br>
@@ -261,7 +261,7 @@ git switch branch_name
 ---
 
 ## 10 - Git Branch Merge And Merge Conflict:
-🏮️ When you have finished working on a branch, you want to merge the changes into the master branch.
+🏮️ When you have finished working on a branch, you may want to merge the changes into the master branch.
 <br>
 🎯️ Merge a branch into the current branch:
 
@@ -294,18 +294,18 @@ Changes from the branch to be merged.
 
 ```
 - You must make sure that you are in the branch you want to merge in.
-- HEAD is meaned the current branch.
+- HEAD is meant for the current branch.
 ```
 
 
 ### ⚠️ Note:
 ```
-- In Git workflow, there are two long-lived branches: master or main and Develop branchs, and the branches remain 
-  short-lived, such as features and bugs brancha. Any branch is merged into the Develop branch, then after making sure 
-  that it is working well, it is merged into the master or main branch.
+- In Git workflow, there are two long-lived branches: master or main and development branches, and the branches that remain 
+  short-lived, such as features and bugs branches. Any branch is merged into the development branch, then after making sure 
+  everything is working well, it's merged into the master or main branch.
 
-- You can use merge to update your local branch when there are updates in the (master, main) branch in the remote repository , 
-  you bring the talk in the remote repository to the (master, main) branch in your repository using pull or fetch , then merge your 
+- You can use merge to update your local branch when there are updates in the (master, main) branch in the remote repository. 
+  You bring the work into the remote repository to the (master, main) branch in your repository using pull or fetch, then merge your 
   (master, main) into the branch you are working on.
 ```
 
@@ -330,7 +330,7 @@ git clone https://github.com/BlackHeart-Dev/try-git.git
 
 # 12 - Git Remote:
 
-🏮️ Git remote is used to refer to a remote repository or your central repository, e.g: When you want to add a remote repository as your origin.
+🏮️ Git remote is used to refer to a remote repository or your central repository, (e.g when you want to add a remote repository as your origin).
 
 ```zsh
 git remote add <alias> <url>
@@ -352,12 +352,11 @@ git remote add origin https://github.com/BlackHeart-Dev/try-git.git
 - Git remote add just creates an entry in your git config that specifies a name for a particular URL. 
   You must have an existing git repo to use this.
   
-- Git clone Will physically download the files into your computer. It will take space from your computer. 
-  If the repo is 200Mb, then it will download that all and place it in the directory you cloned.
+- Git clone will physically download the files into your computer, and take actual space from your computer. 
   
-- Won't take space! It's more like a pointer! It doesn't increase your disk consumption. 
-  It just gets a snapshot of what branches are available and their git commit history I believe. 
-  It doesn't contain the actual file/folders of your project.
+- Git remote won't take local storage space. It's more like a pointer.
+  It just gets a snapshot of what branches are available and their git commit history. 
+  It doesn't contain the actual files/folders of the project.
  
 *from Stackoverflow.
 ```
@@ -365,14 +364,14 @@ git remote add origin https://github.com/BlackHeart-Dev/try-git.git
 ### ⚠️ Note:
 ```
 - origin is alias for remote repository, It is used to refer to the remote repository instead of 
-  using the url every time you want to pull or push or fetch.
+  using the URL every time you want to pull or push or fetch.
 ```
 
 ---
 
 ## 13 - Git Pull:
 
-🏮️ <a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">The git pull</a> command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. Merging remote upstream changes into your local repository is a common task in Git-based collaboration work flows. The git pull command is actually a combination of two other commands, git fetch followed by git merge. In the first stage of operation git pull will execute a git fetch scoped to the local branch that HEAD is pointed at. Once the content is downloaded, git pull will enter a merge workflow. A new merge commit will be-created and HEAD updated to point at the new commit.
+🏮️ <a href="https://www.atlassian.com/git/tutorials/syncing/git-pull">The git pull</a> command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. Merging remote upstream changes into your local repository is a common task in Git-based collaboration work flows. The git pull command is actually a combination of two other commands, git fetch followed by git merge. In the first stage of operation git pull will execute a git fetch scoped to the local branch that HEAD is pointed at. Once the content is downloaded, git pull will enter a merge workflow. A new merge commit will be created and HEAD updated to point to the new commit.
 
 <br>
 
@@ -401,7 +400,7 @@ git pull -u origin xz-y-10.2
 
 ## 14 - Git Fetch:
 
-🏮️ <a href="https://www.atlassian.com/git/tutorials/syncing/git-fetch">The git fetch</a> command downloads commits, files, and refs from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on. It’s similar to svn update in that it lets you see how the central history has progressed, but it doesn’t force you to actually merge the changes into your repository. Git isolates fetched content from existing local content; it has absolutely no effect on your local development work. Fetched content has to be explicitly checked out using the git checkout command. This makes fetching a safe way to review commits before integrating them with your local repository.
+🏮️ <a href="https://www.atlassian.com/git/tutorials/syncing/git-fetch">The git fetch</a> command downloads commits, files, and references from a remote repository into your local repo. Fetching is what you do when you want to see what everybody else has been working on. It’s similar to svn update in that it lets you see how the central history has progressed, but it doesn’t force you to actually merge the changes into your repository. Git isolates fetched content from existing local content; it has absolutely no effect on your local development work. Fetched content has to be explicitly checked out using the git checkout command. This makes fetching a safe way to review commits before integrating them with your local repository.
 
 <br>
 
@@ -423,8 +422,8 @@ git fetch origin
 
 ```
 - Git fetch really only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files. 
-  Fetch is great for getting a fresh view on all the things that happened in a remote repository. Due to it's "harmless" nature, 
-  you can rest assured: fetch will never manipulate, destroy, or screw up anything. This means you can never fetch often enough.
+  Fetch is great for getting a fresh view on all the things that happened in a remote repository. Due to its harmless nature, 
+  you can rest assured; fetch will never manipulate, destroy, or screw anything up. This means you can never fetch often enough.
   
 - Git pull, in contrast, is used with a different goal in mind: to update your current HEAD branch with the latest changes from the remote server. 
   This means that pull not only downloads new data; it also directly integrates it into your current working copy files. 
@@ -432,7 +431,7 @@ git fetch origin
   > Since "git pull" tries to merge remote changes with your local ones, a so-called "merge conflict" can occur. 
 
   > Like for many other actions, it's highly recommended to start a "git pull" only with a clean working copy. 
-    This means that you should not have any uncommitted local changes before you pull. 
+    This means that you should not have any uncommitted local changes before you pull.
     Use Git's Stash feature to save your local changes temporarily.
 ```
 
@@ -462,13 +461,13 @@ git push origin
 
 ## 16 - workflow:
 
-🏮️ Branches in Git are one of the best things about Git and perhaps one of the best features of Git, but what Git does is that it provides the tool but does not tell you how to use it. It leaves you and your team the freedom to use the tool, but as for branches, there are two strategies that are used frequently and Each new strategy is based on them, Git workflow and Github workflow.
+🏮️ Branches are perhaps one of the best features of Git, but what Git often does is provide the tool but not tell you how to use it. It leaves you and your team the freedom to use the tool, and when it comes to branches, there are two frquently-used strategies; the Git workflow and the GitHub workflow.
 
 <br>
 
 ### 🎯️ Git workflow:
 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In Git workflow, there are two long-lived branches: master or main branch and Develop branch, and the branches remain short-lived, such as features and bugs branch. Any branch is merged into the Develop branch, then after making sure that it is working well, it is merged into the master or main branch.
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the Git workflow, there are: two long-lived branches (master & development), and short-lived branches, like for testing features and debugging branches. Any short-lived branch is merged into the development branch, then after making sure that it's properly functioning, it is merged into the master branch.
 
 ![Git workflow](https://user-images.githubusercontent.com/87325345/199704078-58463d7d-840b-430a-87d3-6974402e2ab4.png)
 
@@ -476,7 +475,7 @@ git push origin
 <br>
 
 ### 🎯️ Github workflow:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the Github workflow there are short-lived branches such as features and bugs branch and then after making sure that the branch is working fine, it is merged into the master or main branch.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In the Github workflow there are only short-lived branches for feature-testing and bugs, and the master branch.
 
 ![github-flow](https://user-images.githubusercontent.com/87325345/199710558-1f40b0a2-0a17-4b87-ae3a-feb654ed8904.png)
 
