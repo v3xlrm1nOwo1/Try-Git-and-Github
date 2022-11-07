@@ -494,7 +494,7 @@ git push origin
    </thead>
    <tbody>
       <tr>
-         <td align="center">Github is a sevice</td>
+         <td align="center">Github is a service</td>
          <td align="center">Git is a software</td>
       </tr>
       <tr>
