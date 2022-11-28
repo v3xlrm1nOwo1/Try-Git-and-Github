@@ -46,10 +46,10 @@ git config user.email "Example@example.com"
 🎯️ Git Config For Any Directory For User
 
 ```zsh
-git config --globle user.name YourName
+git config --global user.name YourName
 ```
 ```zsh
-git config --globle user.email "Example@example.com"
+git config --global user.email "Example@example.com"
 ```
 
 ### ⚠️ Note:
