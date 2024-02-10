@@ -1,24 +1,18 @@
-from include import user_info, check_age # function include 
+from include import v3xlrm1nOwo1
 
-# print hello
-print("hello world!")
+url = 'https://github.com/v3xlrm1nOwo1/Try-Git-and-Github.git'
 
-try:
-	# user enter name
-	name = input("Enter your name: ")
+git = v3xlrm1nOwo1(url=url)
 
-	# user enter age
-	age = int(input("Enter your age: "))
-except ValueError:
-	print("Please provide valid input")
-	exit(0)
+clone = git.clone()
+print(clone)
 
-# return info
-user = user_info(name, age)
-print(user)
+add = git.add(file_name='main.py')
+print(add)
 
-# check user age
-user_age = check_age(age)
-print(user_age)
+commit = git.commit(message='init commit uwu')
+print(commit)
 
+push = git.push()
+print(push)
 
