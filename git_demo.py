@@ -1,15 +1,20 @@
-# Return user data
-def user_info(name="oh", age=0):
-    return f"> Yeah, your name is: {name}, and your age is: {age}!"
+'''
+- By: v3xlrm1nOwo1(黒い心臓).
+- Demo git.
+'''
+class v3xlrm1nOwo1:
+    def __init__(self, url):
+        self.url = url
 
-
-# Ckeck Age
-def check_age(age=0):
-    print(f"> Your age is: {age}")
+    def clone(self):
+        return f'git clone {self.url}'
     
-    if age >= 18:
-        return f"> Okay you can entry"
-    
-    return f"> Sorry you can not entry"
+    def add(self, file_name):
+        return f'git add {file_name}'
 
+    def commit(self, message):
+        return f'git commit -m {message}'
+    
+    def push(self):
+        return f'git push --set-upstream origin main'
 
